@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>User Information</h2>
+        <form id="student-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="matric">Matric Number:</label>
+                <input type="text" id="matric" name="matric" required>
+            </div>
+
+            <!-- Button Container -->
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Submit</button>
+                <a href="./dashboard.html">
+                    <button type="button" class="dashboard-btn">Go to Dashboard</button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script type="module" src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
