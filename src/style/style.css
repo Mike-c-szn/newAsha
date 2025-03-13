@@ -6,6 +6,8 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .form-container {
@@ -13,7 +15,9 @@ body {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 .form-container h2 {
@@ -34,7 +38,7 @@ body {
 }
 
 .form-group input {
-    width: calc(100% - 22px); /* Adjust for padding and border */
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -48,41 +52,46 @@ body {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Button Group - Aligns Buttons Side by Side */
 .button-group {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 10px;
 }
 
-/* Submit Button */
-.submit-btn {
-    background-color: #007bff;
-    color: white;
+.submit-btn, .dashboard-btn {
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    flex: 1; /* Equal width for both buttons */
+    width: 100%;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
 }
 
 .submit-btn:hover {
     background-color: #0056b3;
 }
 
-/* Dashboard Button */
 .dashboard-btn {
     background-color: #28a745;
     color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    flex: 1;
 }
 
 .dashboard-btn:hover {
     background-color: #218838;
+}
+
+@media (min-width: 480px) {
+    .button-group {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .submit-btn, .dashboard-btn {
+        flex: 1;
+    }
 }
